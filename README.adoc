@@ -41,6 +41,11 @@ The `popover` content. Content is rooted (becomes children of) `.Popover-body` a
 
 ---
 
+##### `frameEl :: DOMElement | Null`
+The element within which the popover should orient itself. Defaults to `window`.
+
+---
+
 ##### `isOpen :: Boolean`
 Determines Whether or not the popover is rendered.
 
@@ -70,7 +75,7 @@ A callback function executed every time the user does an action (`mousedown` or 
 ##### `refreshIntervalMs :: Number | Falsey`
 The polling speed (AKA time between each poll) in milliseconds for checking if a layout refresh is required. This polling is required because it is the only robust way to track the position of a target in the DOM. Defaults to `200`. Set to a falsey value to disable.
 
---- 
+---
 
 ##### Standard
 
