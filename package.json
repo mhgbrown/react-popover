@@ -8,6 +8,7 @@
     "dev": "npm start",
     "test": "testem",
     "start": "webpack-dev-server --hot",
+    "git-publish": "git checkout publish && git merge master --no-edit && npm run build && git add -A && git commit -m 'publish new version' && git push origin publish && git checkout master",
     "prepublish": "npm run build",
     "postversion": "git push && git push --tags && npm publish"
   },
