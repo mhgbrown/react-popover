@@ -364,8 +364,6 @@ var Popover = (0, _react.createClass)({
     var minScrollRefreshIntervalMs = 200;
     var minResizeRefreshIntervalMs = 200;
 
-    console.log('foo changes');
-
     /* Get references to DOM elements. */
 
     this.containerEl = (0, _reactDom.findDOMNode)(this.layerReactComponent);
