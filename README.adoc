@@ -20,10 +20,10 @@ npm install --save react-popover
 
 ## Demos
 
-* link:/react-popover/build/playground.html[Playground]
-* link:/react-popover/build/rows.html[Rows]
-* link:/react-popover/build/jsx.html[Using JSX]
-* link:/react-popover/build/frame.html[frameEl]
+* link:https://mhgbrown.github.io/react-popover/build/playground.html[Playground]
+* link:https://mhgbrown.github.io/react-popover/build/rows.html[Rows]
+* link:https://mhgbrown.github.io/react-popover/build/jsx.html[Using JSX]
+* link:https://mhgbrown.github.io/react-popover/build/frame.html[frameEl]
 
 To run demos locally execute `npm start`. If you do not see logs in the console refresh the browser once (https://github.com/littlebits/react-popover/issues/35).
 
