@@ -1,0 +1,65 @@
+@import ../base;
+
+
+#main {
+  display: block;
+  text-align: center;
+}
+
+#main:before {
+  display: inline-block;
+  content: "";
+  vertical-align: middle;
+  height: 100%;
+}
+
+
+/* Boilerplate */
+
+#app {
+  display: inline-block;
+  vertical-align: middle;
+  height: 50%;
+  width: 50%;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  position: relative;
+  border-radius: 0.3rem;
+}
+
+
+
+/* Popover */
+
+.Popover-body {
+  padding: 2rem;
+}
+
+
+
+/* Target */
+
+.target {
+  cursor: pointer;
+  user-select: none;
+  display: inline-block;
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+  width: 20px;
+  height: 20px;
+}
+
+.target:before {
+  content: "";
+  vertical-align: middle;
+  display: inline-block;
+  height: 100%;
+}
+
+.target:not(.isOpen) {
+  opacity: 0.5;
+}
+
+.target.isOpen {
+  color: hsla(354, 91%, 60%, 1);
+}

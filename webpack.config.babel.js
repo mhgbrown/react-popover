@@ -12,6 +12,7 @@ export default {
     playground: `./examples/playground/main.js`,
     jsx: `./examples/jsx/main.js`,
     rows: `./examples/rows/main.js`,
+    frame: `./examples/frame/main.js`
   },
   output: {
     path: outputDir,
