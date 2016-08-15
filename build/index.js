@@ -99,6 +99,8 @@ var Popover = (0, _react.createClass)({
     refreshIntervalMs: _react.PropTypes.oneOfType([_react.PropTypes.number, _react.PropTypes.bool]),
     isOpen: _react.PropTypes.bool,
     onOuterAction: _react.PropTypes.func,
+    onMouseEnter: _react.PropTypes.func,
+    onMouseLeave: _react.PropTypes.func,
     enterExitTransitionDurationMs: _react.PropTypes.number,
     className: _react.PropTypes.string,
     style: _react.PropTypes.object
@@ -113,6 +115,8 @@ var Popover = (0, _react.createClass)({
       offset: 4,
       isOpen: false,
       onOuterAction: function noOperation() {},
+      onMouseEnter: function noOperation() {},
+      onMouseLeave: function noOperation() {},
       enterExitTransitionDurationMs: 500,
       children: null,
       refreshIntervalMs: 200
@@ -213,8 +217,6 @@ var Popover = (0, _react.createClass)({
     var frameCrossInnerEnd = frameCrossEnd - frameBuffer;
     var popoverCrossStart = pos[axis.cross.start];
     var popoverCrossEnd = pos[axis.cross.end];
-
-    console.debug(pos, axis, this.frameBounds);
 
     /* If the popover dose not fit into frameCrossLength then just position it to the `frameCrossStart`.
     popoverCrossLength` will now be forced to overflow into the `Frame` */
@@ -450,6 +452,8 @@ var Popover = (0, _react.createClass)({
     this.frameBounds = _layout2.default.El.calcBounds(this.props.frameEl);
   },
   renderLayer: function renderLayer() {
+    var _this2 = this;
+
     if (this.state.exited) return null;
 
     var _props = this.props;
@@ -476,7 +480,11 @@ var Popover = (0, _react.createClass)({
 
     var popoverBody = (0, _utils.arrayify)(this.props.body);
 
-    return _react.DOM.div(popoverProps, _react.DOM.div.apply(_react.DOM, [{ className: 'Popover-body' }].concat(_toConsumableArray(popoverBody))), (0, _react.createElement)(_tip2.default, tipProps));
+    return _react.DOM.div(popoverProps, _react.DOM.div.apply(_react.DOM, [{ className: 'Popover-body', onMouseEnter: function onMouseEnter(ev) {
+        return _this2.props.onMouseEnter(ev);
+      }, onMouseLeave: function onMouseLeave(ev) {
+        return _this2.props.onMouseLeave(ev);
+      } }].concat(_toConsumableArray(popoverBody))), (0, _react.createElement)(_tip2.default, tipProps));
   },
   render: function render() {
     return this.props.children;
