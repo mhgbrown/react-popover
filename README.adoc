@@ -6,6 +6,8 @@
 
 image:https://travis-ci.org/littlebits/react-popover.svg?branch=master["Build Status", link="https://travis-ci.org/littlebits/react-popover"]
 
+**This fork differs from the original in that it lets you specify a frame element other than the window. See the link:https://mhgbrown.github.io/react-popover/build/frame.html[demo].**
+
 
 toc::[]
 
